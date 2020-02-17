@@ -1,0 +1,24 @@
+--- 
+Events: 
+  link: "https://wildflower.papyrs.com/Wildflower-Trainings-Webinars-and-Discussions"
+Home: 
+  link: "https://wildflower.papyrs.com/Papyrs-Home-Page"
+Network: 
+  link: "https://wildflower.papyrs.com/Wildflower"
+  nested: 
+    - Wildflower Collection:
+      link: "https://wildflower.papyrs.com/The-Wildflower-Collection"
+      nested: 
+        - Nine Principles:
+          link: "https://wildflower.papyrs.com/The-Nine-Principles"
+        - Values:
+          link: "https://wildflower.papyrs.com/Wildflower-Values"
+        - Norms:
+          link: "https://wildflower.papyrs.com/Wildflower-Norms"
+School Resources:
+  link: "https://wildflower.papyrs.com/Wildflower"
+  nested: 
+    - New and Noteworthy:
+      link: "https://wildflower.papyrs.com/New-and-Noteworthy-School-Resources"
+    - Roadmaps:
+      link: "https://wildflower.papyrs.com/School-Roadmaps"
