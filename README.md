@@ -1,4 +1,6 @@
-# Papyrs Bootstrap CSS
+# WF Papyrs Menu
+
+Add a bootstrap based menu to Papyrs
 
 ### To test
 
@@ -9,11 +11,11 @@
 
 Not incredibly elegant for now:
 
-`npm build`
+1) `npm build`
 
-Host the JS that's created in: *build/wf-papyrs-menu.{VERSION}.{HASH}.js*
+2) Host the JS that's created in: `build/wf-papyrs-menu.{VERSION}.{HASH}.js`
 
-Load the menu on Papyrs the following JS:
+3) Load the menu on Papyrs with the following JS:
 
 ```
 if ($('#sidebarmenu .tags-val').text().trim().split().indexOf("menu") !== -1) {
