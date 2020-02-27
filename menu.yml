@@ -1,4 +1,3 @@
----
 Events:
   link: "https://wildflower.papyrs.com/Wildflower-Trainings-Webinars-and-Discussions"
 Home:
@@ -17,7 +16,7 @@ Network:
           link: "https://wildflower.papyrs.com/Wildflower-Norms"
 School Resources:
   link: "https://wildflower.papyrs.com/Wildflower"
-  nested:
+  nested: 
     - New and Noteworthy:
       link: "https://wildflower.papyrs.com/New-and-Noteworthy-School-Resources"
     - Roadmaps:
