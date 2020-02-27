@@ -46,4 +46,5 @@ export const renderMenu = async (selector, menuUrl) => {
   )
 
   wfJquery(".bootstrap-wf .navbar").removeClass("hide")
+  console.log("WF Papyrs Menu created!")
 }

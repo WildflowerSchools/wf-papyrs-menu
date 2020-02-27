@@ -77,7 +77,6 @@ const menuNavItemDropdown = dropdownMenuItem => {
 }
 
 const menuNavItemDropdownItem = dropdownMenuItemChild => {
-  console.log(dropdownMenuItemChild)
     return (
       <>
         {dropdownMenuItemChild.children.length === 0 &&
