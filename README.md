@@ -1,19 +1,31 @@
-# wf-papyrs-menu
-A simple custom dropdown menu we can add to Papyrs
+# Papyrs Bootstrap CSS
 
-Add the following code snipped to Papyrs' Custom Javascript:
+### To test
+
+1) `npm install`
+2) `npm start`
+
+### Release
+
+Not incredibly elegant for now:
+
+`npm build`
+
+Host the JS that's created in: *build/wf-papyrs-menu.{VERSION}.{HASH}.js*
+
+Load the menu on Papyrs the following JS:
 
 ```
 if ($('#sidebarmenu .tags-val').text().trim().split().indexOf("menu") !== -1) {
-	$.getScript("https://<<CDN>>/bootstrap-wf-menu.js", function() {
+	$.getScript("<<HOSTED_URL>>", function() {
 		$(document).ready(function() {
 			var setIntervalID = setInterval(function() {
-				if (typeof renderMenu === 'function') {
+				if (typeof wfMenu.renderMenu === 'function') {
 					clearInterval(setIntervalID)
-					renderMenu('#page-heading-wrapper')
+					wfMenu.renderMenu('#page-heading-wrapper')
 				}
 			}, 250)
 		})
 	})
 }
-```
+``` 
