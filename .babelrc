@@ -1,0 +1,16 @@
+{
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      { "regenerator": true }
+    ],
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "pragma": "h",
+        "pragmaFrag": "Fragment",
+        "throwIfNamespace": false
+      }
+    ]
+  ]
+}

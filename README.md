@@ -7,6 +7,12 @@ Add a bootstrap based menu to Papyrs
 1) `npm install`
 2) `npm start`
 
+To test the local **menu.yml**, create a `.env` from the `.env.template` and use:
+
+```
+MENU_YML_URL=http://localhost:3000/menu.yml
+``` 
+
 ### Release
 
 Not incredibly elegant for now:
