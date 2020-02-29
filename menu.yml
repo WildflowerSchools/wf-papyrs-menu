@@ -2,6 +2,26 @@
     link: "https://wildflower.papyrs.com/Papyrs-Home-Page"
 - Events:
     link: "https://wildflower.papyrs.com/Wildflower-Trainings-Webinars-and-Discussions"
+- School Resources:
+    link: "https://wildflower.papyrs.com/School-Resources"
+    children:
+      - New and Noteworthy:
+          link: "https://wildflower.papyrs.com/New-and-Noteworthy-School-Resources"
+      - Roadmaps:
+          link: "https://wildflower.papyrs.com/School-Roadmaps"
+      - Financial Management:
+          link: "https://wildflower.papyrs.com/Financial-Management"
+- Hub: 
+    link: "https://wildflower.papyrs.com/Hub-Home-Page"
+    children: 
+      - Massachussetts:
+          link: "https://wildflower.papyrs.com/Massachusetts"
+      - Puerto Rico:
+          link: "https://wildflower.papyrs.com/Puerto-Rico-Hub"
+      - Minnesota:
+          link: "https://wildflower.papyrs.com/MinnesotaHome"
+      - North Carolina:
+          link: "https://wildflower.papyrs.com/The-Wildflower-Collection"
 - Network:
     link: "https://wildflower.papyrs.com/Wildflower"
     children:
@@ -14,10 +34,9 @@
                 link: "https://wildflower.papyrs.com/Wildflower-Values"
             - Norms:
                 link: "https://wildflower.papyrs.com/Wildflower-Norms"
-- School Resources:
-    link: "https://wildflower.papyrs.com/Wildflower"
-    children:
-      - New and Noteworthy:
-          link: "https://wildflower.papyrs.com/New-and-Noteworthy-School-Resources"
-      - Roadmaps:
-          link: "https://wildflower.papyrs.com/School-Roadmaps"
+- School Startup Roadmap: 
+    link: https://wildflower.papyrs.com/School-Startup-Roadmap
+- Equity: 
+    link: https://wildflower.papyrs.com/Equity-Landing-Page
+- Listserv: 
+    link: https://wildflower.papyrs.com/Listservs  
