@@ -3,8 +3,10 @@
 - Events:
     link: "https://wildflower.papyrs.com/Wildflower-Trainings-Webinars-and-Discussions"
 - School Resources:
-    link: "https://wildflower.papyrs.com/School-Resources"
+    link: "#"
     children:
+      - School Resources Home:
+          link:  "https://wildflower.papyrs.com/School-Resources"
       - New and Noteworthy:
           link: "https://wildflower.papyrs.com/New-and-Noteworthy-School-Resources"
       - Roadmaps:
@@ -12,8 +14,10 @@
       - Financial Management:
           link: "https://wildflower.papyrs.com/Financial-Management"
 - Hub: 
-    link: "https://wildflower.papyrs.com/Hub-Home-Page"
-    children: 
+    link: "#"
+    children:
+      - Hub Home:
+          link: "https://wildflower.papyrs.com/Hub-Home-Page"
       - Massachussetts:
           link: "https://wildflower.papyrs.com/Massachusetts"
       - Puerto Rico:
@@ -23,11 +27,15 @@
       - North Carolina:
           link: "https://wildflower.papyrs.com/The-Wildflower-Collection"
 - Network:
-    link: "https://wildflower.papyrs.com/Wildflower"
+    link: "#"
     children:
+      - Network Home:
+          link: "https://wildflower.papyrs.com/Wildflower"
       - Wildflower Collection:
-          link: "https://wildflower.papyrs.com/The-Wildflower-Collection"
+          link: "#"
           children:
+            - Wildflower Collection Home:
+                link: "https://wildflower.papyrs.com/The-Wildflower-Collection"
             - Nine Principles:
                 link: "https://wildflower.papyrs.com/The-Nine-Principles"
             - Values:

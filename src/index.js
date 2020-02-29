@@ -19,7 +19,7 @@ export const renderMenu = async (selector, menuUrl) => {
   document.querySelector(selector).insertAdjacentElement("beforeend", menuContainer)
 
   wfJquery(".bootstrap-wf .dropdown-menu a.dropdown-toggle").on(
-    "mouseenter",
+    "click",
     function(e) {
       if (
         !wfJquery(this)

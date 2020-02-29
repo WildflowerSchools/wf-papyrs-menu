@@ -23,8 +23,12 @@ const loadMenuYml = async url => {
 const menuContainer = menuModel => {
   return (
     <div className="bootstrap-wf">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light hide">
-        <div className="collapse navbar-collapse" id="basicExampleNav">
+      <nav className="navbar navbar-expand-md navbar-light bg-light hide">
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#wfNavbar"
+                aria-controls="wfNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="wfNavbar">
           <ul className="navbar-nav mr-auto">
             {menuModel.map(menuItem => menuNavItem(menuItem))}
           </ul>
@@ -51,7 +55,7 @@ const menuNavItemDropdown = dropdownMenuItem => {
       <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" href={dropdownMenuItem.link} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         {dropdownMenuItem.name}
       </a>
-      <div className="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+      <div className="dropdown-menu dropdown-primary dropright" aria-labelledby="navbarDropdownMenuLink">
         {dropdownMenuItem.children.length < COLUMN_DIVIDE_AT &&
           <>
             {dropdownMenuItem.children

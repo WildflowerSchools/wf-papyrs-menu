@@ -7,10 +7,16 @@
 }
 
 .dropdown-submenu a::after {
-    transform: rotate(-90deg);
+    transform: rotate(0deg);
     position: absolute;
     right: 6px;
     top: .8em;
+}
+
+@media (max-width: 767px) {
+    .dropdown-submenu a::after {
+        transform: rotate(90deg);
+    }
 }
 
 .dropdown-submenu .dropdown-menu {
