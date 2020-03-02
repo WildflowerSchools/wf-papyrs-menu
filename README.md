@@ -37,3 +37,5 @@ if ($('#sidebarmenu .tags-val').text().trim().split().indexOf("menu") !== -1) {
 	})
 }
 ``` 
+
+4) In Papyrs, add a `menu` tag to all pages the menu should be displayed on. (Note that line 1 of the code you copy/paste in step 3 is searching for this `menu` tag. This was the easiest way I could come up with a method for selectively adding our custom menu)
