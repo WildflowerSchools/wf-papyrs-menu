@@ -2,17 +2,6 @@
     link: "https://wildflower.papyrs.com/Papyrs-Home-Page"
 - Events:
     link: "https://wildflower.papyrs.com/Wildflower-Trainings-Webinars-and-Discussions"
-- School Resources:
-    link: "#"
-    children:
-      - School Resources Home:
-          link:  "https://wildflower.papyrs.com/School-Resources"
-      - New and Noteworthy:
-          link: "https://wildflower.papyrs.com/New-and-Noteworthy-School-Resources"
-      - Roadmaps:
-          link: "https://wildflower.papyrs.com/School-Roadmaps"
-      - Financial Management:
-          link: "https://wildflower.papyrs.com/Financial-Management"
 - Hub: 
     link: "#"
     children:
