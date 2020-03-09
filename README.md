@@ -1,6 +1,6 @@
-# WF Papyrs Menu
+# WF Papyrs Library
 
-Add a bootstrap based menu to Papyrs
+* Adds a bootstrap based menu to Papyrs
 
 ### To test
 
