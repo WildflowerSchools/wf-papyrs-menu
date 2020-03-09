@@ -31,8 +31,8 @@ module.exports = (env, options) => {
     output: {
       path: path.resolve(__dirname, 'build'),
       publicPath: '/',
-      filename: () => build ? `wf-papyrs-menu.${version}.[contenthash].js` : 'bundle.js',
-      library: 'wfMenu',
+      filename: () => build ? `wf-papyrs-library.${version}.[contenthash].js` : 'bundle.js',
+      library: 'wfLibrary',
       libraryTarget: 'var'
     },
     module: {

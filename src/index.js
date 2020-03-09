@@ -16,7 +16,9 @@ export const renderMenu = async (selector, menuUrl) => {
   // Load menu
   const menuContainer = document.createElement("div")
   await loadMenu(menuUrl, menuContainer)
-  document.querySelector(selector).insertAdjacentElement("beforeend", menuContainer)
+  document
+    .querySelector(selector)
+    .insertAdjacentElement("beforeend", menuContainer)
 
   wfJquery(".bootstrap-wf .dropdown-menu a.dropdown-toggle").on(
     "click",
@@ -48,3 +50,5 @@ export const renderMenu = async (selector, menuUrl) => {
   wfJquery(".bootstrap-wf .navbar").removeClass("hide")
   console.log("WF Papyrs Menu created!")
 }
+
+export const applyToggles = () => {}

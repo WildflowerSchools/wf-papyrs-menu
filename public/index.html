@@ -4,26 +4,190 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- <script src="./bootstrap-wf-menu.js"></script> -->
     <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script async src="./<%= htmlWebpackPlugin.files.chunks['app'].entry %>"></script>
+
     <script>
-        console.log("Trying...")
-      $(document).ready(function() {
-        let setIntervalID = setInterval(function() {
-          console.log("Waiting...")
-          if (typeof wfMenu.renderMenu === 'function') {
-            clearInterval(setIntervalID)
-            wfMenu.renderMenu('#page-heading-wrapper')
-          }
-        }, 300)
-      })
+        console.log("Testing menu...")
+        $(document).ready(function() {
+            let setIntervalID = setInterval(function() {
+                console.log("Waiting for renderMenu...")
+                if (typeof wfLibrary.renderMenu === 'function') {
+                    clearInterval(setIntervalID)
+                    wfLibrary.renderMenu('#page-heading-wrapper')
+                }
+            }, 300)
+        })
     </script>
 
     <title>Test Papyrs Boostrap Menu</title>
 </head>
 <body>
+    <!-- Test Heading-->
     <div id="page-heading-wrapper" />
+
+    <!--Test Toggle-->
+    <table id="page" cellspacing="0" cellpading="0" style="width: 1104px; table-layout: fixed">
+        <tbody>
+        <tr class="columngroup">
+            <td class="pagecolumn  firstcolumn pagecolspan8" colspan="8">
+                <div class="papyrs_node_container papyrs_node_editable show_delete_lnk show_edit_lnk show_copy_lnk show_style_lnk">
+                    <div id="obj_11008484" class="obj_heading papyrs_node" classname="Heading" obj_id="11008484">
+                        <a class="anchor" name="Example-Header-Toggle-Please">
+                        </a>
+                        <div class="rich_editable obj_heading_h2 style_line" id="val">+ Example Header - Toggle Please</div>
+                    </div>
+                </div>
+                <div class="papyrs_node_container papyrs_node_editable show_delete_lnk show_edit_lnk show_copy_lnk show_style_lnk">
+                    <div id="obj_10719732" class="obj_paragraph papyrs_node" classname="Paragraph" obj_id="10719732">
+                        <div class="rich_editable" id="val">
+                            <div style="font-weight: 400; font-style: normal;">
+                                <span style="font-style: normal; font-weight: 400;">Long content</span>
+                                <div style="font-weight: 400; font-style: normal;">
+                                    <br>
+                                </div>
+                                <div style="font-weight: 400; font-style: normal;">
+                                    <br>
+                                </div>
+                                <div style="font-weight: 400; font-style: normal;">
+                                    <br>
+                                </div>
+                                <div style="font-weight: 400; font-style: normal;">
+                                    <br>
+                                </div>
+                                <div style="font-weight: 400; font-style: normal;">
+                                    <span style="font-weight: 400; font-style: normal;">Long content</span>
+                                    <div style="font-weight: 400; font-style: normal;">
+                                        <br>
+                                    </div>
+                                    <div style="font-weight: 400; font-style: normal;">
+                                        <br>
+                                    </div>
+                                    <div style="font-weight: 400; font-style: normal;">
+                                        <br>
+                                    </div>
+                                    <div style="font-weight: 400; font-style: normal;">
+                                        <br>
+                                    </div>
+                                    <div style="font-weight: 400; font-style: normal;">
+                                        <span style="font-weight: 400; font-style: normal;">Long content</span>
+                                        <div style="font-weight: 400; font-style: normal;">
+                                            <br>
+                                        </div>
+                                        <div style="font-weight: 400; font-style: normal;">
+                                            <br>
+                                        </div>
+                                        <div style="font-weight: 400; font-style: normal;">
+                                            <br>
+                                        </div>
+                                        <div style="font-weight: 400; font-style: normal;">
+                                            <br>
+                                        </div>
+                                        <div style="font-weight: 400; font-style: normal;">
+                                            <span style="font-weight: 400; font-style: normal;">Long content</span>
+                                            <div style="font-weight: 400; font-style: normal;">
+                                                <br>
+                                            </div>
+                                            <div style="font-weight: 400; font-style: normal;">
+                                                <br>
+                                            </div>
+                                            <div style="font-weight: 400; font-style: normal;">
+                                                <br>
+                                            </div>
+                                            <div style="font-weight: 400; font-style: normal;">
+                                                <br>
+                                            </div>
+                                            <div style="font-weight: 400; font-style: normal;">
+                                                <span style="font-weight: 400; font-style: normal;">Long content</span>
+                                                <div style="font-weight: 400; font-style: normal;">
+                                                    <br>
+                                                </div>
+                                                <div style="font-weight: 400; font-style: normal;">
+                                                    <br>
+                                                </div>
+                                                <div style="font-weight: 400; font-style: normal;">
+                                                    <br>
+                                                </div>
+                                                <div style="font-weight: 400; font-style: normal;">
+                                                    <br>
+                                                </div>
+                                                <div style="font-weight: 400; font-style: normal;">
+                                                    <span style="font-weight: 400; font-style: normal;">Long content</span>
+                                                    <div style="font-weight: 400; font-style: normal;">
+                                                        <br>
+                                                    </div>
+                                                    <div style="font-weight: 400; font-style: normal;">
+                                                        <br>
+                                                    </div>
+                                                    <div style="font-weight: 400; font-style: normal;">
+                                                        <br>
+                                                    </div>
+                                                    <div style="font-weight: 400; font-style: normal;">
+                                                        <br>
+                                                    </div>
+                                                    <div style="font-weight: 400; font-style: normal;">
+                                                        <span style="font-weight: 400; font-style: normal;">Long content</span>
+                                                        <div style="font-weight: 400; font-style: normal;">
+                                                            <br>
+                                                        </div>
+                                                        <div style="font-weight: 400; font-style: normal;">
+                                                            <br>
+                                                        </div>
+                                                        <div style="font-weight: 400; font-style: normal;">
+                                                            <br>
+                                                        </div>
+                                                        <div style="font-weight: 400; font-style: normal;">
+                                                            <br>
+                                                        </div>
+                                                        <div style="font-weight: 400; font-style: normal;">
+                                                            <span style="font-weight: 400; font-style: normal;">Long content</span>
+                                                            <div style="font-weight: 400; font-style: normal;">
+                                                                <br>
+                                                            </div>
+                                                            <div style="font-weight: 400; font-style: normal;">
+                                                                <br>
+                                                            </div>
+                                                            <div style="font-weight: 400; font-style: normal;">
+                                                                <br>
+                                                            </div>
+                                                            <div style="font-weight: 400; font-style: normal;">
+                                                                <br>
+                                                            </div>
+                                                            <div style="font-weight: 400; font-style: normal;">
+                                                                <span style="font-weight: 400; font-style: normal;">Long content</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="papyrs_node_container papyrs_node_editable show_delete_lnk show_edit_lnk show_copy_lnk show_style_lnk">
+                    <div id="obj_5995883" class="obj_paragraph papyrs_node" classname="Paragraph" obj_id="5995883">
+                        <div class="rich_editable" id="val">Can anyone else edit this page?</div>
+                    </div>
+                </div>
+                <div class="papyrs_node_container papyrs_node_editable show_delete_lnk show_edit_lnk show_copy_lnk show_style_lnk">
+                    <div id="obj_11008486" class="obj_heading papyrs_node" classname="Heading" obj_id="11008486">
+                        <a class="anchor" name="Toggle-2">
+                        </a>
+                        <div class="rich_editable obj_heading_h1" id="val">+ Toggle 2</div>
+                    </div>
+                </div>
+                <div class="papyrs_node_container papyrs_node_editable show_delete_lnk show_edit_lnk show_copy_lnk show_style_lnk">
+                    <div id="obj_11008487" class="obj_paragraph papyrs_node" classname="Paragraph" obj_id="11008487">
+                        <div class="rich_editable" id="val">Short content</div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </body>
 
 </html>
