@@ -25,7 +25,7 @@ Not incredibly elegant for now:
 3) Load on Papyrs with the following JS (notice the conditionals for using menu and collapsibles):
 
 ```
-// Custom menu functionality, see: https://github.com/WildflowerSchools/wf-papyrs-menu
+// Custom menu functionality, see: https://github.com/WildflowerSchools/wf-papyrs-library
 const useMenu = $('#sidebarmenu .tags-val').text().trim().split().indexOf("menu") !== -1
 const useCollapse = $('#sidebarmenu .tags-val').text().trim().split().indexOf("collapse") !== -1
 
