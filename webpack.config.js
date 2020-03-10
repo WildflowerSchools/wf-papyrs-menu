@@ -87,6 +87,7 @@ module.exports = (env, options) => {
       })
     ],
     optimization: {
+      minimize: true,
       minimizer: [
         new TerserPlugin({
           terserOptions: {
