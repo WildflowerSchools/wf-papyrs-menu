@@ -41,10 +41,11 @@
 
     .chevron {
         margin-left: 0.5rem;
-        transition: .3s transform ease-in-out;
+        transition: all .2s linear;
     }
 
     &.collapsed .chevron {
         transform: rotate(-90deg);
+        transform-origin: 35% 50%;
     }
 }
