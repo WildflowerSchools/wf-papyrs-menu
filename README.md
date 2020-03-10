@@ -19,7 +19,7 @@ MENU_YML_URL=http://localhost:3000/menu.yml
 
 Not incredibly elegant for now:
 
-1) `npm build`
+1) `npm run build`
 
 2) Host the JS that's created in: `build/wf-papyrs-library.{VERSION}.{HASH}.js`
 

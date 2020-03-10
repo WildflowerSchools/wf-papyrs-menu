@@ -148,7 +148,7 @@ export const buildModel = (menu, isRoot = true) => {
   })
 }
 
-export const loadMenu = async (url, container) => {
+export const load = async (url, container) => {
   const jsonMenu = await loadMenuYml(url)
   const menuModel = buildModel(jsonMenu)
 

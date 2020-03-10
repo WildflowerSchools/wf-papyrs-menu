@@ -38,7 +38,7 @@ module.exports = (env, options) => {
     module: {
       rules: [
         {
-          test: /\.less$/,
+          test: /\.s[ac]ss$/i,
           use: [
             {
               loader: 'css-loader'
@@ -48,15 +48,11 @@ module.exports = (env, options) => {
               options: {
                 search: "(\.bootstrap-wf) (html|body)",
                 replace: "$1",
-                flags: "g",
-                strict: true
+                flags: "g"
               }
             },
             {
-              loader: 'less-loader', // compiles Less to CSS
-              options: {
-                math: 'strict'
-              }
+              loader: 'sass-loader', // compiles SCSS to CSS
             }
           ]
         },
@@ -100,6 +96,12 @@ module.exports = (env, options) => {
           }
         })
       ]
+    },
+    resolve: {
+      alias: {
+        'react': 'preact/compat',
+        'react-dom': 'preact/compat'
+      }
     }
   };
 };

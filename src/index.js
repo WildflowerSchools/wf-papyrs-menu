@@ -1,17 +1,18 @@
 import "bootstrap"
 import wfJquery from "jquery"
 
-import { loadMenu } from "./menu.jsx"
-import styles from "./prefix.less"
+import { load as loadMenu } from "./menu.jsx"
+import { transform as _transformCollapsibles } from "./collapse.jsx"
+import styles from "./styles/prefix.scss"
+
+// Load style
+const styleRef = document.createElement("style")
+styleRef.setAttribute("type", "text/css")
+styleRef.appendChild(document.createTextNode(styles))
+document.getElementsByTagName("head")[0].appendChild(styleRef)
 
 export const renderMenu = async (selector, menuUrl) => {
   console.log("Rendering WF Papyrs Menu...")
-
-  // Load style
-  const styleRef = document.createElement("style")
-  styleRef.setAttribute("type", "text/css")
-  styleRef.appendChild(document.createTextNode(styles))
-  document.getElementsByTagName("head")[0].appendChild(styleRef)
 
   // Load menu
   const menuContainer = document.createElement("div")
@@ -51,4 +52,6 @@ export const renderMenu = async (selector, menuUrl) => {
   console.log("WF Papyrs Menu created!")
 }
 
-export const applyToggles = () => {}
+export const transformCollapsibles = (options = {}) => {
+  _transformCollapsibles(options)
+}

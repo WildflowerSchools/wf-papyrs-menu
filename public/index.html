@@ -10,24 +10,42 @@
     <script>
         console.log("Testing menu...")
         $(document).ready(function() {
-            let setIntervalID = setInterval(function() {
+            let setMenuIntervalID = setInterval(function() {
                 console.log("Waiting for renderMenu...")
                 if (typeof wfLibrary.renderMenu === 'function') {
-                    clearInterval(setIntervalID)
+                    clearInterval(setMenuIntervalID)
                     wfLibrary.renderMenu('#page-heading-wrapper')
                 }
             }, 300)
         })
     </script>
 
+    <script>
+      console.log("Testing collapsibles...")
+      $(document).ready(function() {
+        let setCollapsiblesIntervalID = setInterval(function() {
+          console.log("Waiting for transformCollapsibles...")
+          if (typeof wfLibrary.transformCollapsibles === 'function') {
+            clearInterval(setCollapsiblesIntervalID)
+            wfLibrary.transformCollapsibles()
+          }
+        }, 300)
+      })
+    </script>
+
     <title>Test Papyrs Boostrap Menu</title>
 </head>
 <body>
     <!-- Test Heading-->
-    <div id="page-heading-wrapper" />
+    <div>
+        <h2>Menu</h2>
+        <div id="page-heading-wrapper" />
+    </div>
 
     <!--Test Toggle-->
-    <table id="page" cellspacing="0" cellpading="0" style="width: 1104px; table-layout: fixed">
+    <div>
+        <h2>Collapse</h2>
+        <table id="page" cellspacing="0" cellpading="0" style="width: 1104px; table-layout: fixed">
         <tbody>
         <tr class="columngroup">
             <td class="pagecolumn  firstcolumn pagecolspan8" colspan="8">
@@ -188,6 +206,7 @@
         </tr>
         </tbody>
     </table>
+    </div>
 </body>
 
 </html>

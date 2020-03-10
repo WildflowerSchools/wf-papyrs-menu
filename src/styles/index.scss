@@ -35,3 +35,16 @@
         width: inherit;
     }
 }
+
+.collapsible {
+    cursor: pointer;
+
+    .chevron {
+        margin-left: 0.5rem;
+        transition: .3s transform ease-in-out;
+    }
+
+    &.collapsed .chevron {
+        transform: rotate(-90deg);
+    }
+}
