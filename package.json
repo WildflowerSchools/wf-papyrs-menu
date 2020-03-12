@@ -1,6 +1,6 @@
 {
   "name": "wf-papyrs-menu",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Custom WF menu for Papyrs",
   "private": false,
   "dependencies": {},
@@ -23,7 +23,7 @@
     "js-yaml": "^3.13.1",
     "node-sass": "^4.13.1",
     "popper.js": "^1.16.1",
-    "preact": "^10.3.3",
+    "preact": "^10.3.4",
     "sass-loader": "^8.0.2",
     "string-replace-loader": "^2.2.0",
     "style-loader": "^1.1.3",
@@ -34,7 +34,7 @@
   },
   "scripts": {
     "demo": "npm run build && open build/index.html",
-    "start": "npm run clean && webpack-dev-server --mode development",
+    "start": "npm run clean && webpack-dev-server -d --mode development",
     "build": "npm run clean && webpack --mode production",
     "clean": "rm -rf build/*",
     "test": "echo 'tsk tsk... you should be testing'",

@@ -14,7 +14,7 @@
                 console.log("Waiting for renderMenu...")
                 if (typeof wfLibrary.renderMenu === 'function') {
                     clearInterval(setMenuIntervalID)
-                    wfLibrary.renderMenu('#page-heading-wrapper')
+                  wfLibrary.renderMenu('#page-heading-wrapper')
                 }
             }, 300)
         })
@@ -45,36 +45,36 @@
     <!--Test Toggle-->
     <div>
         <h2>Collapse</h2>
-        <table id="page" cellspacing="0" cellpading="0" style="width: 1104px; table-layout: fixed">
-        <tbody>
-        <tr class="columngroup">
-            <td class="pagecolumn  firstcolumn pagecolspan8" colspan="8">
-                <div class="papyrs_node_container papyrs_node_editable show_delete_lnk show_edit_lnk show_copy_lnk show_style_lnk">
-                    <div id="obj_11008484" class="obj_heading papyrs_node" classname="Heading" obj_id="11008484">
-                        <a class="anchor" name="Example-Header-Toggle-Please">
-                        </a>
-                        <div class="rich_editable obj_heading_h2 style_line" id="val">+ Example Header - Toggle Please</div>
+        <a id="btn_edit_page" href="#">Edit</a>
+        <script>
+          $(window).on("load", function(e){
+            $("#btn_edit_page").on("click", () => {
+              e.preventDefault()
+              $("#pagewrapper").toggleClass("mode_view").toggleClass("mode_edit")
+            })
+          })
+        </script>
+        <div id="pagewrapper" class="mode_view">
+            <form enctype="multipart/form-data" name="papyrs_page_form" id="page_form" method="post" action="?">
+                <input type="hidden" name="csrfmiddlewaretoken" value="sq4I56ClSZ6b7bsgNjsx0iuMccuBbfthKlMD7hIxtLTzeMKpgVSlLshz3rguc1hd">
+
+
+                <table id="page" cellspacing="0" cellpading="0" style="width: 1104px; table-layout: fixed">
+            <tbody>
+            <tr class="columngroup">
+                <td class="pagecolumn  firstcolumn pagecolspan8" colspan="8">
+                    <div class="papyrs_node_container papyrs_node_editable show_delete_lnk show_edit_lnk show_copy_lnk show_style_lnk">
+                        <div id="obj_11008484" class="obj_heading papyrs_node" classname="Heading" obj_id="11008484">
+                            <a class="anchor" name="Example-Header-Toggle-Please">
+                            </a>
+                            <div class="rich_editable obj_heading_h2 style_line" id="val">+ Example Header - Toggle Please</div>
+                        </div>
                     </div>
-                </div>
-                <div class="papyrs_node_container papyrs_node_editable show_delete_lnk show_edit_lnk show_copy_lnk show_style_lnk">
-                    <div id="obj_10719732" class="obj_paragraph papyrs_node" classname="Paragraph" obj_id="10719732">
-                        <div class="rich_editable" id="val">
-                            <div style="font-weight: 400; font-style: normal;">
-                                <span style="font-style: normal; font-weight: 400;">Long content</span>
+                    <div class="papyrs_node_container papyrs_node_editable show_delete_lnk show_edit_lnk show_copy_lnk show_style_lnk">
+                        <div id="obj_10719732" class="obj_paragraph papyrs_node" classname="Paragraph" obj_id="10719732">
+                            <div class="rich_editable" id="val">
                                 <div style="font-weight: 400; font-style: normal;">
-                                    <br>
-                                </div>
-                                <div style="font-weight: 400; font-style: normal;">
-                                    <br>
-                                </div>
-                                <div style="font-weight: 400; font-style: normal;">
-                                    <br>
-                                </div>
-                                <div style="font-weight: 400; font-style: normal;">
-                                    <br>
-                                </div>
-                                <div style="font-weight: 400; font-style: normal;">
-                                    <span style="font-weight: 400; font-style: normal;">Long content</span>
+                                    <span style="font-style: normal; font-weight: 400;">Long content</span>
                                     <div style="font-weight: 400; font-style: normal;">
                                         <br>
                                     </div>
@@ -173,6 +173,21 @@
                                                             </div>
                                                             <div style="font-weight: 400; font-style: normal;">
                                                                 <span style="font-weight: 400; font-style: normal;">Long content</span>
+                                                                <div style="font-weight: 400; font-style: normal;">
+                                                                    <br>
+                                                                </div>
+                                                                <div style="font-weight: 400; font-style: normal;">
+                                                                    <br>
+                                                                </div>
+                                                                <div style="font-weight: 400; font-style: normal;">
+                                                                    <br>
+                                                                </div>
+                                                                <div style="font-weight: 400; font-style: normal;">
+                                                                    <br>
+                                                                </div>
+                                                                <div style="font-weight: 400; font-style: normal;">
+                                                                    <span style="font-weight: 400; font-style: normal;">Long content</span>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -184,28 +199,29 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="papyrs_node_container papyrs_node_editable show_delete_lnk show_edit_lnk show_copy_lnk show_style_lnk">
-                    <div id="obj_5995883" class="obj_paragraph papyrs_node" classname="Paragraph" obj_id="5995883">
-                        <div class="rich_editable" id="val">Can anyone else edit this page?</div>
+                    <div class="papyrs_node_container papyrs_node_editable show_delete_lnk show_edit_lnk show_copy_lnk show_style_lnk">
+                        <div id="obj_5995883" class="obj_paragraph papyrs_node" classname="Paragraph" obj_id="5995883">
+                            <div class="rich_editable" id="val">Can anyone else edit this page?</div>
+                        </div>
                     </div>
-                </div>
-                <div class="papyrs_node_container papyrs_node_editable show_delete_lnk show_edit_lnk show_copy_lnk show_style_lnk">
-                    <div id="obj_11008486" class="obj_heading papyrs_node" classname="Heading" obj_id="11008486">
-                        <a class="anchor" name="Toggle-2">
-                        </a>
-                        <div class="rich_editable obj_heading_h1" id="val">+ Toggle 2</div>
+                    <div class="papyrs_node_container papyrs_node_editable show_delete_lnk show_edit_lnk show_copy_lnk show_style_lnk">
+                        <div id="obj_11008486" class="obj_heading papyrs_node" classname="Heading" obj_id="11008486">
+                            <a class="anchor" name="Toggle-2">
+                            </a>
+                            <div class="rich_editable obj_heading_h1" id="val">+ Toggle 2</div>
+                        </div>
                     </div>
-                </div>
-                <div class="papyrs_node_container papyrs_node_editable show_delete_lnk show_edit_lnk show_copy_lnk show_style_lnk">
-                    <div id="obj_11008487" class="obj_paragraph papyrs_node" classname="Paragraph" obj_id="11008487">
-                        <div class="rich_editable" id="val">Short content</div>
+                    <div class="papyrs_node_container papyrs_node_editable show_delete_lnk show_edit_lnk show_copy_lnk show_style_lnk">
+                        <div id="obj_11008487" class="obj_paragraph papyrs_node" classname="Paragraph" obj_id="11008487">
+                            <div class="rich_editable" id="val">Short content</div>
+                        </div>
                     </div>
-                </div>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+            </form>
+        </div>
     </div>
 </body>
 

@@ -11,7 +11,7 @@ require('dotenv').config();
 
 module.exports = (env, options) => {
 
-  const build = options.mode === 'production';
+  const build = options.mode === 'production'
   const version = package.version
 
   return {
