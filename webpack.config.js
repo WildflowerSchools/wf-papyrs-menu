@@ -1,8 +1,10 @@
-const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
+
 const webpack = require('webpack');
 
 const package = require('./package.json');
@@ -84,6 +86,9 @@ module.exports = (env, options) => {
         template: path.join(__dirname, 'public', 'index.html'),
         inject: false,
         filename: path.join(__dirname, 'build', 'index.html'),
+      }),
+      new CompressionPlugin({
+        test: /\.js(\?.*)?$/i
       })
     ],
     optimization: {
@@ -97,6 +102,10 @@ module.exports = (env, options) => {
           }
         })
       ]
+    },
+    performance: {
+      maxEntrypointSize: 650000,
+      maxAssetSize: 650000
     },
     resolve: {
       alias: {

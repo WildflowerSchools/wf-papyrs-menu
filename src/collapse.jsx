@@ -6,30 +6,18 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 
 const PAPYRS_HEADING_CLASS_IDENTIFIER = "obj_heading_h"
 const PAPYRS_PAGE_FORM_CONTENT_IDENTIFIER = "#page_form"
+const PAPYRS_EDIT_CLICK_IDENTIFIER =
+  "#btn_edit_page, #lnk_edit_page, #sidebarmenu_view .button.rbutton"
 
 let originalContent = null
 let originalProps = {}
-
-wfJquery.fn.bindFirst = function(name, fn) {
-  // Thanks: https://stackoverflow.com/questions/2360655/jquery-event-handlers-always-execute-in-order-they-were-bound-any-way-around-t
-  this.on(name, fn)
-
-  // Thanks to a comment by @Martin, adding support for
-  // namespaced events too.
-  this.each(() => {
-    let handlers = wfJquery._data(this[0], "events")[name.split(".")[0]]
-    // take out the handler we just inserted from the end
-    let handler = handlers.pop()
-    // move it at the beginning
-    handlers.splice(0, 0, handler)
-  })
-}
 
 const jQuerySearchHeaderString = match => {
   return `div[class*=${PAPYRS_HEADING_CLASS_IDENTIFIER}]:contains("${match}")`
 }
 
 const loadOriginalContent = () => {
+  console.log("Reloaded original content")
   if (originalContent === null) {
     console.error("Unable to load original page content, content not captured")
     return
@@ -49,7 +37,15 @@ const observeModeChange = () => {
   }
 
   // Listen for Papyrs viewing mode to change to editing mode. When change detected, reload original content
-  //wfJquery(PAPYRS_EDIT_CLICK_IDENTIFIER).bindFirst('click', loadOriginalContent)
+  wfJquery(PAPYRS_EDIT_CLICK_IDENTIFIER).each((_, elem) => {
+    elem.addEventListener(
+      "click",
+      () => {
+        loadOriginalContent()
+      },
+      true
+    )
+  })
 
   // Listen for Papyrs viewing/editing mode change. When change detected reload original content or reapply transform.
   const callback = function(mutationsList, observer) {
@@ -58,13 +54,17 @@ const observeModeChange = () => {
         const classValue = wfJquery(mutation.target).prop(
           mutation.attributeName
         )
+
+        // Old version of content load was not fast enough to beat Papyrs' own editing jQuery
+        // if (
+        //   classValue.split(" ").includes("mode_edit") &&
+        //   !mutation.oldValue.split(" ").includes("mode_edit") &&
+        //   mutation.oldValue.split(" ").includes("mode_view")
+        // ) {
+        //   loadOriginalContent()
+        // } else
+
         if (
-          classValue.split(" ").includes("mode_edit") &&
-          !mutation.oldValue.split(" ").includes("mode_edit") &&
-          mutation.oldValue.split(" ").includes("mode_view")
-        ) {
-          loadOriginalContent()
-        } else if (
           classValue.split(" ").includes("mode_view") &&
           !mutation.oldValue.split(" ").includes("mode_view") &&
           mutation.oldValue.split(" ").includes("mode_edit")
