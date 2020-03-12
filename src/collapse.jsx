@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 
 const PAPYRS_HEADING_CLASS_IDENTIFIER = "obj_heading_h"
-const PAPYRS_EDIT_CLICK_IDENTIFIER = "#btn_edit_page, #lnk_edit_page"
+const PAPYRS_PAGE_FORM_CONTENT_IDENTIFIER = "#page_form"
 
 let originalContent = null
 let originalProps = {}
@@ -25,7 +25,7 @@ wfJquery.fn.bindFirst = function(name, fn) {
   })
 }
 
-const jQuerySearchString = match => {
+const jQuerySearchHeaderString = match => {
   return `div[class*=${PAPYRS_HEADING_CLASS_IDENTIFIER}]:contains("${match}")`
 }
 
@@ -35,7 +35,7 @@ const loadOriginalContent = () => {
     return
   }
 
-  wfJquery("#page_form").replaceWith(originalContent)
+  wfJquery(PAPYRS_PAGE_FORM_CONTENT_IDENTIFIER).replaceWith(originalContent)
   originalContent = null
 }
 
@@ -51,7 +51,7 @@ const observeModeChange = () => {
   // Listen for Papyrs viewing mode to change to editing mode. When change detected, reload original content
   //wfJquery(PAPYRS_EDIT_CLICK_IDENTIFIER).bindFirst('click', loadOriginalContent)
 
-  // Listen for Papyrs editing mode to change to viewing mode. When change detected reapply transform.
+  // Listen for Papyrs viewing/editing mode change. When change detected reload original content or reapply transform.
   const callback = function(mutationsList, observer) {
     for (let mutation of mutationsList) {
       if (mutation.attributeName === "class") {
@@ -84,18 +84,16 @@ const observeModeChange = () => {
   })
 }
 
-const undoTransform = props => {}
-
 const applyTransform = props => {
-  originalContent = wfJquery("#page_form")
+  originalContent = wfJquery(PAPYRS_PAGE_FORM_CONTENT_IDENTIFIER)
   let modifiedContent = originalContent.clone()
-  wfJquery("#page_form").replaceWith(modifiedContent)
+  wfJquery(PAPYRS_PAGE_FORM_CONTENT_IDENTIFIER).replaceWith(modifiedContent)
 
   const { match = "+ " } = props
 
-  const search = jQuerySearchString(match)
+  const searchHeaders = jQuerySearchHeaderString(match)
 
-  const matchingElements = wfJquery(search)
+  const matchingElements = wfJquery(searchHeaders)
 
   matchingElements.each((idx, e) => {
     const parent = wfJquery(e)
@@ -106,7 +104,7 @@ const applyTransform = props => {
       .addClass("bootstrap-wf-collapsible")
     const siblings = parent.nextAll()
     const nextHeader = siblings
-      .find(search)
+      .find(searchHeaders)
       .first()
       .parents(".papyrs_node_container")
       .first()
