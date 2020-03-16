@@ -5,19 +5,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 
 const PAPYRS_HEADING_CLASS_IDENTIFIER = "obj_heading_h"
-const PAPYRS_PAGE_FORM_CONTENT_IDENTIFIER = "#page_form"
+const PAPYRS_PAGE_FORM_CONTENT_IDENTIFIER = "#pagewrapper.mode_view #page_form"
 const PAPYRS_EDIT_CLICK_IDENTIFIER =
   "#btn_edit_page, #lnk_edit_page, #sidebarmenu_view .button.rbutton"
 
 let originalContent = null
 let originalProps = {}
 
-const jQuerySearchHeaderString = match => {
-  return `div[class*=${PAPYRS_HEADING_CLASS_IDENTIFIER}]:contains("${match}")`
-}
+;(function($) {
+  $.fn.findCollapsibleHeaders = function(matchRegExp) {
+    return $(this)
+      .find(`div[class*=${PAPYRS_HEADING_CLASS_IDENTIFIER}]`)
+      .filter((_, e) => {
+        return RegExp(matchRegExp).test(wfJquery(e).text())
+      })
+  }
+})(wfJquery)
 
 const loadOriginalContent = () => {
-  console.log("Reloaded original content")
   if (originalContent === null) {
     console.error("Unable to load original page content, content not captured")
     return
@@ -25,6 +30,7 @@ const loadOriginalContent = () => {
 
   wfJquery(PAPYRS_PAGE_FORM_CONTENT_IDENTIFIER).replaceWith(originalContent)
   originalContent = null
+  console.log("Reloaded original content")
 }
 
 const observeModeChange = () => {
@@ -85,15 +91,20 @@ const observeModeChange = () => {
 }
 
 const applyTransform = props => {
-  originalContent = wfJquery(PAPYRS_PAGE_FORM_CONTENT_IDENTIFIER)
+  const _oc = wfJquery(PAPYRS_PAGE_FORM_CONTENT_IDENTIFIER)
+  if (_oc.length === 0) {
+    return
+  }
+  originalContent = _oc
+
   let modifiedContent = originalContent.clone()
   wfJquery(PAPYRS_PAGE_FORM_CONTENT_IDENTIFIER).replaceWith(modifiedContent)
 
-  const { match = "+ " } = props
+  // Valid match: "<<SOL>>+ ", "<<five spaces>><<EOL>", "<<tab>><<EOL>>"
+  const { match = /\+ |\s{5}$|(\t)$/ } = props
 
-  const searchHeaders = jQuerySearchHeaderString(match)
-
-  const matchingElements = wfJquery(searchHeaders)
+  const matchingElements = wfJquery("body").findCollapsibleHeaders(match)
+  // console.log(matchingElements)
 
   matchingElements.each((idx, e) => {
     const parent = wfJquery(e)
@@ -104,7 +115,7 @@ const applyTransform = props => {
       .addClass("bootstrap-wf-collapsible")
     const siblings = parent.nextAll()
     const nextHeader = siblings
-      .find(searchHeaders)
+      .findCollapsibleHeaders(match)
       .first()
       .parents(".papyrs_node_container")
       .first()
