@@ -1,7 +1,13 @@
 - Home:
-    link: "https://wildflower.papyrs.com/home"
-- Events:
-    link: "https://wildflower.papyrs.com/Wildflower-Trainings-Webinars-and-Discussions"
+    link: "https://wildflower.papyrs.com/Papyrs-Home-Page"
+- COVID19 Resources: 
+    link: "https://wildflower.papyrs.com/COVID-19-Response-Resources"
+- School Resources: 
+    link: "https://wildflower.papyrs.com/School-Resources"
+- School Startup Roadmap: 
+    link: "https://wildflower.papyrs.com/School-Startup-Roadmap"
+- Network:
+    link: "https://wildflower.papyrs.com/Wildflower"
 - Hub: 
     link: "#"
     children:
@@ -14,26 +20,8 @@
       - Minnesota:
           link: "https://wildflower.papyrs.com/MinnesotaHome"
       - North Carolina:
-          link: "https://wildflower.papyrs.com/The-Wildflower-Collection"
-- Network:
-    link: "#"
-    children:
-      - Network Home:
-          link: "https://wildflower.papyrs.com/Wildflower"
-      - Wildflower Collection:
-          link: "#"
-          children:
-            - Wildflower Collection Home:
-                link: "https://wildflower.papyrs.com/The-Wildflower-Collection"
-            - Nine Principles:
-                link: "https://wildflower.papyrs.com/The-Nine-Principles"
-            - Values:
-                link: "https://wildflower.papyrs.com/Wildflower-Values"
-            - Norms:
-                link: "https://wildflower.papyrs.com/Wildflower-Norms"
-- School Startup Roadmap: 
-    link: https://wildflower.papyrs.com/School-Startup-Roadmap
+          link: "https://wildflower.papyrs.com/North-Carolina-Hub-Home"
 - Equity: 
-    link: https://wildflower.papyrs.com/Equity-Landing-Page
-- Listserv: 
-    link: https://wildflower.papyrs.com/Listservs  
+    link: "https://wildflower.papyrs.com/Equity-Landing-Page"
+- Events:
+    link: "https://wildflower.papyrs.com/Wildflower-Trainings-Webinars-and-Discussions"
